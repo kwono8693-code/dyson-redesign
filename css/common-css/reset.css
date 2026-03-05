@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 20px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+em,address,i{
+    font-style: inherit;
+}
+strong,b{
+    font-weight: inherit;
+}
+ul,ol{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+table{
+    border-collapse: collapse;
+}

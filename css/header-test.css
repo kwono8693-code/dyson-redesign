@@ -1,0 +1,54 @@
+header {
+    position: relative;
+    background: #333;
+    color: #fff;
+}
+.inner-header {
+    width: 1600px;
+    margin: 0 auto;
+    height: 100px;
+}
+header .inner-header{
+    display: flex;
+    align-items: center;
+}
+.gnb {
+    display: flex;
+    gap: 40px;
+}
+
+.menu-item a {
+    color: #fff;
+    text-decoration: none;
+}
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background: #333;
+    padding: 3rem 0;
+}
+header.open .mega-menu {
+    display: block;
+}
+.depth2 {
+    display: none;
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.depth2.active {
+    display: block;
+}
+
+.depth2 li {
+    margin-bottom: .7rem;
+}
+
+.depth2 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: .8rem;
+}

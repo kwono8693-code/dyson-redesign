@@ -1,0 +1,8 @@
+@font-face{
+    font-family: "dyson";
+    src: url(./font/dyson-sans-modern.ttf);
+    font-weight: 400;
+}
+.subtypo1{
+    font-family: "dyson";
+}
