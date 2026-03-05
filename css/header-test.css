@@ -1,7 +1,19 @@
+html{
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 20px;
+}
+.wrap{
+    padding-top: 100px;
+}
 header {
-    position: relative;
+    position: fixed;
     background: #333;
     color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 .inner-header {
     width: 1600px;
@@ -11,13 +23,14 @@ header {
 header .inner-header{
     display: flex;
     align-items: center;
+    border: 1px solid #fff;
 }
 .gnb {
     display: flex;
     gap: 40px;
 }
 
-.menu-item a {
+.menu-item > a {
     color: #fff;
     text-decoration: none;
 }
@@ -28,17 +41,20 @@ header .inner-header{
     left: 0;
     width: 100%;
     background: #333;
-    padding: 3rem 0;
+    padding: 3rem 5rem;
 }
 header.open .mega-menu {
     display: block;
 }
 .depth2 {
     display: none;
-    width: 1600px;
+    /* width: 1600px;
+    margin: 0 auto; */
+}
+.mega-menu .depth2 {
+    max-width: 1600px;
     margin: 0 auto;
 }
-
 .depth2.active {
     display: block;
 }
@@ -51,4 +67,12 @@ header.open .mega-menu {
     color: #fff;
     text-decoration: none;
     font-size: .8rem;
+}
+.menu-item > a {
+    font-weight: 400;
+    /* transition: font-weight .2s ease; */
+}
+
+.menu-item > a:hover {
+    font-weight: 600;
 }
