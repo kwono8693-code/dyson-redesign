@@ -1,0 +1,109 @@
+html{
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 20px;
+}
+header {
+    position: fixed;
+    background: #333;
+    color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.inner-header {
+    /* width: 1600px; */
+    margin: 0 2rem;
+    height: 100px;
+}
+header .inner-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7rem;
+}
+.gnb {
+    width: 800px;
+    display: flex;
+    height: 100%;
+    font-size: 1rem;
+}
+.gnb>li{
+    flex: 1;
+}
+.gnb>li>a{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.lnb{
+    display: flex;
+    width: 580px;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub-menu{
+    display: flex;
+    gap: 1rem;
+}
+.sub-menu>li{
+    color: #ccc;
+    font-size: .8rem;
+}
+.sub-menu>li>a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-menu{
+    display: flex;
+    gap: 1rem;
+}
+.menu-item > a {
+    color: #fff;
+    text-decoration: none;
+}
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background: #333;
+    padding: 1rem 18rem;
+}
+header.open .mega-menu {
+    display: block;
+}
+.depth2 {
+    display: none;
+    /* width: 1600px;
+    margin: 0 auto; */
+}
+.mega-menu .depth2 {
+    /* max-width: 1600px; */
+    margin: 0 auto;
+}
+.depth2.active {
+    display: block;
+}
+
+.depth2 li {
+    margin-bottom: .7rem;
+}
+
+.depth2 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: .8rem;
+}
+.menu-item > a {
+    font-weight: 400;
+    /* transition: font-weight .2s ease; */
+}
+
+.menu-item > a:hover {
+    font-weight: 600;
+}

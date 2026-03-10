@@ -1,25 +1,34 @@
-document.addEventListener("DOMContentLoaded",function(){
+function initHeaderMenu() {
 
-    const header = document.querySelector('header');
-    const menuItems = document.querySelectorAll('.menu-item');
+  const header = document.querySelector("header");
+  const menuItems = document.querySelectorAll(".menu-item");
+  const depth2Menus = document.querySelectorAll(".depth2");
 
-    menuItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-        // 헤더 열기
-        header.classList.add('open');
+  if (!header || menuItems.length === 0) return;
 
-        // 다른 메뉴 닫기
-        menuItems.forEach(i => i.classList.remove('active'));
+  menuItems.forEach(item => {
+    item.addEventListener("mouseenter", () => {
 
-        // 현재 메뉴만 활성화
-        item.classList.add('active');
-        });
+      const target = item.dataset.menu;
+
+      header.classList.add("open");
+
+      depth2Menus.forEach(menu => {
+        menu.classList.toggle(
+          "active",
+          menu.dataset.target === target
+        );
+      });
+
     });
+  });
 
-    // header 영역을 벗어나면 전부 닫기
-    header.addEventListener('mouseleave', () => {
-        header.classList.remove('open');
-        menuItems.forEach(i => i.classList.remove('active'));
+  header.addEventListener("mouseleave", () => {
+    header.classList.remove("open");
+
+    depth2Menus.forEach(menu => {
+      menu.classList.remove("active");
     });
+  });
 
-})
+}
